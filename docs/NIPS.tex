@@ -1,0 +1,69 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+% \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading nips_2017
+%
+% to avoid loading the natbib package, add option nonatbib:
+% \usepackage[nonatbib]{nips_2017}
+
+\usepackage{nips_2017}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+% \usepackage[final]{nips_2017}
+
+\usepackage{polski}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+
+\title{Rozpoznawanie stylu budowli na podstawie jej zdjęcia
+\\\normalsize Nowe trendy w obliczeniach neuronowych - Projekt }
+
+% The \author macro works with any number of authors. There are two
+% commands used to separate the names and addresses of multiple
+% authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to
+% break the lines. Using \AND forces a line break at that point. So,
+% if LaTeX puts 3 of 4 authors names on the first line, and the last
+% on the second line, try using \AND instead of \And before the third
+% author name.
+
+\author{Bartosz Janusz 210004}
+
+\begin{document}
+% \nipsfinalcopy is no longer used
+
+\maketitle
+
+\begin{abstract}
+  Celem projektu jest stworzenie klasyfikatora w oparciu o głębokie sieci neuronowe, który dla danych wejściowych w postaci zdjęcia budynku, będzie w stanie przyporządkować go do jednej z kilku epok, której styl reprezentuje. Autor zastrzega sobie możliwość arbitralnego wyboru, które epoki będą obsługiwane (wynikać to będzie z dostępności danych uczących). W ramach projektu zakłada się wykorzystanie istniejącego zbioru anotowanych przykładów oraz wzbogacenie go. 
+\end{abstract}
+
+\section{Pierwszy kamień milowy}
+Pierwszy kamień milowy:
+Zebranie zbioru uczącego – rozszerzenie istniejącego zbioru za pomocą grafik z sieci, wykorzystanie technik data augmentation do jego powiększenia. Aplikacja umożliwiająca preprocessing zdjęcia do wektora liczb gotowego do podania na wejścia sieci neuronowej. Skompletowanie środowiska do przeprowadzenia badań i możliwość uruchomienia uczenia na podstawowym modelu.
+\section{Drugi kamień milowy}
+Dostrojenie hiperparametrów modelu, działąjący klasyfikator.
+
+
+\end{document}
+
+Poni¿ej znajduje siê tabela, w której znajduj¹ siê informacje jak zapisaæ poprawnie polskie znaki w formie zakodowanej:
+POLSKA LITERA   KOD TEX POLSKA LITERA   KOD TEX
+¹       \k{a}   ¥       \k{A}
+æ       \'c     Æ       \'C
+ê       \k{e}   Ê       \k{E}
+³       \l{}    £       \L{}
+ñ       \'n     Ñ       \'N
+ó       \'o     Ó       \'O
+œ       \'s     Œ       \'S
+¿       \.z     ¯       \.Z
+Ÿ       \'z            \'Z
+
