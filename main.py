@@ -34,7 +34,7 @@ validation_features, validation_labels, validation_generator = get_features_and_
 
 print("**********Configure model for training************")
 model = models.Sequential()
-model.add(layers.Dense(128, activation='relu', input_dim=7 * 7 * 512))
+model.add(layers.Dense(256, activation='relu', input_dim=7 * 7 * 512))
 model.add(layers.Dropout(0.5))
 model.add(layers.Dense(nClasses, activation='softmax'))
 
@@ -58,7 +58,7 @@ ground_truth = [np.where(r == 1)[0][0] for r in validation_labels]
 
 label2index = validation_generator.class_indices
 
-# Getting the mapping from class index to class label
+# Getting mapping from class index to class label
 idx2label = dict((v, k) for k, v in label2index.items())
 
 predictions = model.predict_classes(validation_features)
