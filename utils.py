@@ -4,14 +4,20 @@ import numpy as np
 from keras.preprocessing.image import ImageDataGenerator
 
 
-def get_features_and_labels(n_samples, n_classes, batch_size, data_dir, conv_base):
-    data_generator = ImageDataGenerator(rescale=1. / 255,
-                                        # horizontal_flip=True,
-                                        # fill_mode="nearest",
-                                        # zoom_range=0.3,
-                                        # width_shift_range=0.3,
-                                        # height_shift_range=0.3
+def get_features_and_labels(n_samples, n_classes, batch_size, data_dir, conv_base, aug):
+    
+   
+    
+    if aug:
+        data_generator = ImageDataGenerator(rescale=1. / 255,
+                                        horizontal_flip=True,
+                                         fill_mode="nearest",
+                                         zoom_range=0.3,
+                                         width_shift_range=0.3,
+                                         height_shift_range=0.3
                                         )
+    else:
+        data_generator = ImageDataGenerator(rescale=1. / 255)
 
     features = np.zeros(shape=(n_samples, 7, 7, 512))
     labels = np.zeros(shape=(n_samples, n_classes))
@@ -34,4 +40,4 @@ def get_features_and_labels(n_samples, n_classes, batch_size, data_dir, conv_bas
 
     features = np.reshape(features, (n_samples, 7 * 7 * 512))
 
-    return features, labels, generator
+    return features, labels
